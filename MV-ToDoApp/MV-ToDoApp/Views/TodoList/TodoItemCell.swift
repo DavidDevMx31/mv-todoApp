@@ -23,8 +23,8 @@ struct TodoItemCell: View {
 }
 
 
-struct ToDoItemCell_Previews: PreviewProvider {
+struct TodoItemCell_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoItemCell()
+        TodoItemCell(item: ToDoItem(title: "Ejemplo", description: "Ejemplo"))
     }
 }
