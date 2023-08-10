@@ -18,6 +18,7 @@
 		B43191122A845DD30099BF46 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43191112A845DD30099BF46 /* ToDoItem.swift */; };
 		B43191152A845E3A0099BF46 /* ToDoListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43191142A845E3A0099BF46 /* ToDoListApi.swift */; };
 		B43191182A845E650099BF46 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43191172A845E650099BF46 /* ApiCaller.swift */; };
+		B431911C2A8460530099BF46 /* ApiCallerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431911B2A8460530099BF46 /* ApiCallerError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B43191112A845DD30099BF46 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		B43191142A845E3A0099BF46 /* ToDoListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApi.swift; sourceTree = "<group>"; };
 		B43191172A845E650099BF46 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
+		B431911B2A8460530099BF46 /* ApiCallerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallerError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		B43190D92A845AFD0099BF46 /* MV-ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				B43191192A8460150099BF46 /* Constants */,
 				B431910E2A845D7A0099BF46 /* Services */,
 				B431910D2A845D700099BF46 /* Models */,
 				B431910C2A845D540099BF46 /* Views */,
@@ -157,7 +160,7 @@
 		B431910E2A845D7A0099BF46 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B43191162A845E570099BF46 /* Common */,
+				B43191162A845E570099BF46 /* Networking */,
 				B43191132A845DD70099BF46 /* ToDoList */,
 			);
 			path = Services;
@@ -171,12 +174,20 @@
 			path = ToDoList;
 			sourceTree = "<group>";
 		};
-		B43191162A845E570099BF46 /* Common */ = {
+		B43191162A845E570099BF46 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				B43191172A845E650099BF46 /* ApiCaller.swift */,
 			);
-			path = Common;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B43191192A8460150099BF46 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B431911B2A8460530099BF46 /* ApiCallerError.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 				B43191182A845E650099BF46 /* ApiCaller.swift in Sources */,
 				B43191102A845DC70099BF46 /* ToDoListView.swift in Sources */,
 				B43190DD2A845AFD0099BF46 /* ContentView.swift in Sources */,
+				B431911C2A8460530099BF46 /* ApiCallerError.swift in Sources */,
 				B43191122A845DD30099BF46 /* ToDoItem.swift in Sources */,
 				B43190DB2A845AFD0099BF46 /* MV_ToDoAppApp.swift in Sources */,
 			);
