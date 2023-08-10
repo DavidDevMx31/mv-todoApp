@@ -14,6 +14,7 @@ class ToDoListStore: ObservableObject {
     
     //MARK: Published properties
     @Published var list: ToDoList
+    @Published var errorMessage: String?
     
     //MARK: Init
     init(listSource: ToDoListApi) {
@@ -23,5 +24,14 @@ class ToDoListStore: ObservableObject {
     
     func getListItems() async {
         list = ToDoList(name: "Mi lista", items: await listApi.fetchToDoItems())
+    }
+    
+    func changeListName(_ newName: String) {
+        if newName.isEmpty {
+            errorMessage = "*El nombre de la lista es requerido."
+            return
+        }
+        list.changeName(newName)
+        errorMessage = nil
     }
 }
