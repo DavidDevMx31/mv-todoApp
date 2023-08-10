@@ -8,6 +8,10 @@
 import Foundation
 
 struct ToDoList {
-    var name: String
+    private(set) var name: String
     var items: [ToDoItem]
+    
+    mutating func changeName(_ newName: String) {
+        self.name = newName
+    }
 }
