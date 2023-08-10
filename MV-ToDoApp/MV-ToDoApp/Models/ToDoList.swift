@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct ToDoList {
+    var items: [ToDoItem]
+}
