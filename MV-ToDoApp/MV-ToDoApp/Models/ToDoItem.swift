@@ -8,5 +8,15 @@
 import Foundation
 
 struct ToDoItem {
+    let id: String
+    let title: String
+    let description: String
+    let isCompleted: Bool
     
+    init(title: String, description: String, isCompleted: Bool = false) {
+        self.id = UUID().uuidString
+        self.title = title
+        self.description = description
+        self.isCompleted = isCompleted
+    }
 }
