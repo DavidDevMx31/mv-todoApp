@@ -8,5 +8,6 @@
 import Foundation
 
 struct ToDoList {
+    var name: String
     var items: [ToDoItem]
 }
