@@ -42,18 +42,6 @@ struct ToDoListView: View {
     }
 }
 
-struct ToolbarEditButton: View {
-    let completion: (()->())?
-    
-    var body: some View {
-        Button {
-            completion?()
-        } label: {
-            Image(systemName: "pencil")
-        }
-    }
-}
-
 struct ToDoListView_Previews: PreviewProvider {
     static var previews: some View {
         ToDoListView()

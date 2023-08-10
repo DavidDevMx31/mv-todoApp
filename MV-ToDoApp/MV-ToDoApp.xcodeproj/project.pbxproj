@@ -23,6 +23,7 @@
 		B43191182A845E650099BF46 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43191172A845E650099BF46 /* ApiCaller.swift */; };
 		B431911C2A8460530099BF46 /* ApiCallerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431911B2A8460530099BF46 /* ApiCallerError.swift */; };
 		B431911E2A8463530099BF46 /* ToDoList_LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431911D2A8463530099BF46 /* ToDoList_LocalService.swift */; };
+		B44EA6612A85ADE500EC427B /* ToolbarEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EA6602A85ADE500EC427B /* ToolbarEditButton.swift */; };
 		B4AAA8632A84A4C200F835E6 /* ChangeTodoListNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA8622A84A4C200F835E6 /* ChangeTodoListNameView.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		B43191172A845E650099BF46 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		B431911B2A8460530099BF46 /* ApiCallerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallerError.swift; sourceTree = "<group>"; };
 		B431911D2A8463530099BF46 /* ToDoList_LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList_LocalService.swift; sourceTree = "<group>"; };
+		B44EA6602A85ADE500EC427B /* ToolbarEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarEditButton.swift; sourceTree = "<group>"; };
 		B4AAA8622A84A4C200F835E6 /* ChangeTodoListNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTodoListNameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 		B43190D92A845AFD0099BF46 /* MV-ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				B44EA65E2A85ADB100EC427B /* Common */,
 				B43191192A8460150099BF46 /* Constants */,
 				B431910E2A845D7A0099BF46 /* Services */,
 				B431910D2A845D700099BF46 /* Models */,
@@ -211,6 +214,22 @@
 				B431911B2A8460530099BF46 /* ApiCallerError.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		B44EA65E2A85ADB100EC427B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B44EA65F2A85ADB600EC427B /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B44EA65F2A85ADB600EC427B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B44EA6602A85ADE500EC427B /* ToolbarEditButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +369,7 @@
 				B418FA952A8495C700E7F478 /* EmptyTodoListView.swift in Sources */,
 				B43191182A845E650099BF46 /* ApiCaller.swift in Sources */,
 				B43191102A845DC70099BF46 /* ToDoListView.swift in Sources */,
+				B44EA6612A85ADE500EC427B /* ToolbarEditButton.swift in Sources */,
 				B431911C2A8460530099BF46 /* ApiCallerError.swift in Sources */,
 				B418FA932A84959900E7F478 /* TodoItemCell.swift in Sources */,
 				B43191122A845DD30099BF46 /* ToDoItem.swift in Sources */,
