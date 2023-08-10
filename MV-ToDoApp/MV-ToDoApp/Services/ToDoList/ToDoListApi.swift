@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ToDoListApi {
-    
+    func fetchToDoItems() async -> [ToDoItem]
 }
