@@ -9,9 +9,13 @@ import Foundation
 
 struct ToDoList {
     private(set) var name: String
-    var items: [ToDoItem]
+    private(set) var items: [ToDoItem]
     
     mutating func changeName(_ newName: String) {
         self.name = newName
+    }
+    
+    mutating func removeItems() {
+        self.items.removeAll()
     }
 }

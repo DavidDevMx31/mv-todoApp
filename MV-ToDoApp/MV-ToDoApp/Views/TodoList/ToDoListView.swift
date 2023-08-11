@@ -25,7 +25,7 @@ struct ToDoListView: View {
             }
             .navigationTitle(store.list.name)
             .sheet(isPresented: $showChangeNameSheet) {
-                ChangeTodoListNameView(listStore: store)
+                EditTodoListView(listStore: store)
                     .presentationDetents([.fraction(0.4)])
             }
             .toolbar {

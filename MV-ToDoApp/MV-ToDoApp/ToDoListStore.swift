@@ -34,4 +34,8 @@ class ToDoListStore: ObservableObject {
         list.changeName(newName)
         errorMessage = nil
     }
+    
+    func removeAllItems() {
+        list.removeItems()
+    }
 }

@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct ChangeTodoListNameView: View {
+struct EditTodoListView: View {
     @ObservedObject var listStore: ToDoListStore
     @Environment(\.dismiss) var dismiss
     
     @State private var listName: String = ""
+    @State private var showRemoveItemsAlert: Bool = false
     
     var body: some View {
         Form {
@@ -29,6 +30,25 @@ struct ChangeTodoListNameView: View {
                     .font(.caption)
                     .foregroundColor(.red)
             }
+            
+            Section {
+                Button(role: .destructive) {
+                    self.showRemoveItemsAlert = true
+                } label: {
+                    Text("Vaciar lista")
+                }
+                .disabled(listStore.list.items.count == 0)
+            } header: {
+                Text("Acciones")
+            }
+            .alert("¿Estás seguro que deseas vaciar la lista?", isPresented: $showRemoveItemsAlert) {
+                Button(role: .destructive) {
+                    removeListItems()
+                    self.dismiss()
+                } label: {
+                    Text("Vaciar")
+                }
+            }
         }
         .task {
             listName = listStore.list.name
@@ -39,12 +59,16 @@ struct ChangeTodoListNameView: View {
         listStore.changeListName(listName)
         if listStore.errorMessage == nil { self.dismiss() }
     }
+    
+    private func removeListItems() {
+        listStore.removeAllItems()
+    }
 }
 
 struct ChangeTodoListNameView_Previews: PreviewProvider {
     
     static var previews: some View {
         let listStore = ToDoListStore(listSource: ToDoList_LocalService())
-        ChangeTodoListNameView(listStore: listStore)
+        EditTodoListView(listStore: listStore)
     }
 }
