@@ -19,25 +19,25 @@ struct ToDoListView: View {
                     List(store.list.items) { item in
                         TodoItemCell(item: item)
                     }
-                    .sheet(isPresented: $showChangeNameSheet) {
-                        ChangeTodoListNameView(listStore: store)
-                            .presentationDetents([.fraction(0.25)])
-                    }
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            ToolbarEditButton {
-                                self.showChangeNameSheet = true
-                            }
-                        }
-                    }
                 } else {
                     EmptyTodoListView()
                 }
             }
             .navigationTitle(store.list.name)
-        }
-        .task {
-            await store.getListItems()
+            .sheet(isPresented: $showChangeNameSheet) {
+                ChangeTodoListNameView(listStore: store)
+                    .presentationDetents([.fraction(0.4)])
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarEditButton {
+                        self.showChangeNameSheet = true
+                    }
+                }
+            }
+            .task {
+                await store.getListItems()
+            }
         }
     }
 }
