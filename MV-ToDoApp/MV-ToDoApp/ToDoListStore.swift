@@ -14,7 +14,7 @@ class ToDoListStore: ObservableObject {
     
     //MARK: Published properties
     @Published var list: ToDoList
-    @Published var errorMessage: String?
+    @Published var errorMessage: ToDoListStoreError?
     
     //MARK: Init
     init(listSource: ToDoListApi) {
@@ -28,7 +28,7 @@ class ToDoListStore: ObservableObject {
     
     func changeListName(_ newName: String) {
         if newName.isEmpty {
-            errorMessage = "*El nombre de la lista es requerido."
+            errorMessage = .listNameRequired
             return
         }
         list.changeName(newName)

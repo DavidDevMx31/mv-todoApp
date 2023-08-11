@@ -20,13 +20,12 @@ struct ChangeTodoListNameView: View {
                           text: $listName,
                           prompt: Text("Ingresa el nombre de la lista"))
                 .onSubmit {
-                    listStore.changeListName(listName)
-                    if listStore.errorMessage == nil { self.dismiss() }
+                    saveListName(listName)
                 }
             } header: {
                 Text("Nombre de la lista")
             } footer: {
-                Text(listStore.errorMessage ?? "")
+                Text(listStore.errorMessage?.message ?? "")
                     .font(.caption)
                     .foregroundColor(.red)
             }
@@ -34,6 +33,11 @@ struct ChangeTodoListNameView: View {
         .task {
             listName = listStore.list.name
         }
+    }
+    
+    private func saveListName(_ listName: String) {
+        listStore.changeListName(listName)
+        if listStore.errorMessage == nil { self.dismiss() }
     }
 }
 
