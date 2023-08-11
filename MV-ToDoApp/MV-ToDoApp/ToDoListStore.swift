@@ -38,4 +38,8 @@ class ToDoListStore: ObservableObject {
     func removeAllItems() {
         list.removeItems()
     }
+    
+    func markItemCompleted(_ itemId: String) {
+        list.markItemCompleted(itemId: itemId)
+    }
 }

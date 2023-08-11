@@ -18,4 +18,9 @@ struct ToDoList {
     mutating func removeItems() {
         self.items.removeAll()
     }
+    
+    mutating func markItemCompleted(itemId: String) {
+        guard let itemIndex = self.items.firstIndex(where: { $0.id == itemId }) else { return }
+        self.items[itemIndex].markCompleted()
+    }
 }

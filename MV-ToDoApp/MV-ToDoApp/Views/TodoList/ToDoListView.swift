@@ -18,6 +18,12 @@ struct ToDoListView: View {
                 if store.list.items.count != 0 {
                     List(store.list.items) { item in
                         TodoItemCell(item: item)
+                            .swipeActions {
+                                Button("Marcar completado") {
+                                    store.markItemCompleted(item.id)
+                                }
+                                .tint(.green)
+                            }
                     }
                 } else {
                     EmptyTodoListView()
