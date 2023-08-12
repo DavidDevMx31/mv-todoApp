@@ -20,15 +20,18 @@ struct ToDoListView: View {
                     List(store.list.items) { item in
                         TodoItemCell(item: item)
                             .swipeActions {
-                                Button("Marcar completado") {
+                                Button(action: {
                                     store.markItemCompleted(item.id)
-                                }
+                                }, label: {
+                                    Label("Marcar completado", systemImage: "checkmark")
+                                })
                                 .tint(.green)
+                                .disabled(item.isCompleted)
                                 
                                 Button(role: .destructive) {
                                     store.deleteItem(item.id)
                                 } label: {
-                                    Text("Eliminar")
+                                    Label("Eliminar", systemImage: "trash")
                                 }
                             }
                     }
