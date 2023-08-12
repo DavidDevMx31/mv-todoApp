@@ -20,11 +20,20 @@ struct ToDoList {
     }
     
     mutating func markItemCompleted(itemId: String) {
-        guard let itemIndex = self.items.firstIndex(where: { $0.id == itemId }) else { return }
+        guard let itemIndex = getIndexOfItemWith(id: itemId) else { return }
         self.items[itemIndex].markCompleted()
     }
     
     mutating func addItem(_ todoItem: ToDoItem) {
         self.items.append(todoItem)
+    }
+    
+    mutating func removeItemWith(id: String) {
+        guard let index = getIndexOfItemWith(id: id) else { return }
+        self.items.remove(at: index)
+    }
+    
+    private func getIndexOfItemWith(id: String) -> Int? {
+        self.items.firstIndex(where: { $0.id == id })
     }
 }

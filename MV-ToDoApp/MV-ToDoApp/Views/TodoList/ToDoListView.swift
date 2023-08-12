@@ -24,6 +24,12 @@ struct ToDoListView: View {
                                     store.markItemCompleted(item.id)
                                 }
                                 .tint(.green)
+                                
+                                Button(role: .destructive) {
+                                    store.deleteItem(item.id)
+                                } label: {
+                                    Text("Eliminar")
+                                }
                             }
                     }
                 } else {

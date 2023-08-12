@@ -46,4 +46,8 @@ class ToDoListStore: ObservableObject {
     func addItem(_ todoItem: ToDoItem) {
         list.addItem(todoItem)
     }
+    
+    func deleteItem(_ itemId: String) {
+        list.removeItemWith(id: itemId)
+    }
 }
