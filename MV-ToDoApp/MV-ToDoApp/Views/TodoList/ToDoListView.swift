@@ -11,6 +11,7 @@ struct ToDoListView: View {
     @StateObject var store: ToDoListStore = ToDoListStore(listSource: ToDoList_LocalService())
     
     @State private var showChangeNameSheet = false
+    @State private var showAddItemSheet = false
     
     var body: some View {
         NavigationStack {
@@ -34,10 +35,18 @@ struct ToDoListView: View {
                 EditTodoListView(listStore: store)
                     .presentationDetents([.fraction(0.4)])
             }
+            .sheet(isPresented: $showAddItemSheet, content: {
+                AddTodoItemView(listStore: store)
+            })
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    
                     ToolbarEditButton {
                         self.showChangeNameSheet = true
+                    }
+                
+                    ToolbarAddButton() {
+                        self.showAddItemSheet = true
                     }
                 }
             }

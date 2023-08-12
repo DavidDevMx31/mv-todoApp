@@ -23,4 +23,8 @@ struct ToDoList {
         guard let itemIndex = self.items.firstIndex(where: { $0.id == itemId }) else { return }
         self.items[itemIndex].markCompleted()
     }
+    
+    mutating func addItem(_ todoItem: ToDoItem) {
+        self.items.append(todoItem)
+    }
 }

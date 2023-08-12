@@ -42,4 +42,8 @@ class ToDoListStore: ObservableObject {
     func markItemCompleted(_ itemId: String) {
         list.markItemCompleted(itemId: itemId)
     }
+    
+    func addItem(_ todoItem: ToDoItem) {
+        list.addItem(todoItem)
+    }
 }
