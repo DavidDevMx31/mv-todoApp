@@ -12,12 +12,20 @@ struct TodoItemCell: View {
     let item: ToDoItem
     
     var body: some View {
-        HStack {
-            if item.isCompleted {
-                Image(systemName: "checkmark.circle.fill")
-                    .foregroundColor(.green)
+        VStack(alignment: .leading) {
+            HStack {
+                Text(item.title)
+                    .font(.title2)
+                
+                if item.isCompleted {
+                    Spacer()
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.green)
+                }
             }
-            Text(item.title)
+            Text(item.description)
+                .font(.body)
+                .foregroundColor(.gray)
         }
     }
 }
