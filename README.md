@@ -17,7 +17,7 @@ The project is developed using SwiftUI following the MV pattern. The data is sto
 
 ### Adding a task
 
-https://github.com/DavidDevMx31/mv-todoApp/assets/67614342/f34fa234-21b9-4a43-9527-5378fadd579a
+https://github.com/DavidDevMx31/mv-todoApp/assets/67614342/38eca890-c05f-4df9-b27b-5b8354d6c19d
 
 1. Launch the app
 2. Tap on + icon
