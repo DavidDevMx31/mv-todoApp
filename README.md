@@ -42,6 +42,13 @@ Marking a task as done can be performed in two ways:
 Or:
 1. Full swipe left on the task you would like to mark as done.
 
+### Edit list name
+
+https://github.com/DavidDevMx31/mv-todoApp/assets/67614342/0801b40f-4cdf-45e2-93e9-a760fef3efd4
+
+1. Tap on the pencil icon on the navigation bar.
+2. Enter the new name for the list (it cannot be empty).
+
 ## Documentation
 
 The project structure follows the MV pattern. This is not the official name of the pattern; some refer to it as the State Pattern, while others call it the Model-View Pattern.
