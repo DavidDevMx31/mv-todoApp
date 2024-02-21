@@ -49,6 +49,15 @@ https://github.com/DavidDevMx31/mv-todoApp/assets/67614342/0801b40f-4cdf-45e2-93
 1. Tap on the pencil icon on the navigation bar.
 2. Enter the new name for the list (it cannot be empty).
 
+### Clear list
+
+https://github.com/DavidDevMx31/mv-todoApp/assets/67614342/3da2d249-28f8-40df-9585-f35a21d009bd
+
+1. Tap on the pencil icon on the navigation bar.
+2. Tap on the 'Vaciar lista' option.
+3. The app will show an alert asking for confirmation.
+4. Tap 'Vaciar'.
+   
 ## Documentation
 
 The project structure follows the MV pattern. This is not the official name of the pattern; some refer to it as the State Pattern, while others call it the Model-View Pattern.
