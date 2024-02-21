@@ -23,6 +23,17 @@ https://github.com/DavidDevMx31/mv-todoApp/assets/67614342/cb0e1d7c-e26b-4508-aa
 2. Tap on + icon
 3. Add task data
 
+### Delete task
+
+https://github.com/DavidDevMx31/mv-todoApp/assets/67614342/36d6b295-65f9-4965-8fda-7307d82c78b3
+
+Deleting a task can be performed in two ways:
+
+1. Swipe left the row you would like to delete.
+2. Tap on the trash icon.
+
+a. Full swipe left on the row you would like to delete.
+
 ## Documentation
 
 The project structure follows the MV pattern. This is not the official name of the pattern; some refer to it as the State Pattern, while others call it the Model-View Pattern.
