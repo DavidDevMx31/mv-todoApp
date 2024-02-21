@@ -50,9 +50,9 @@ Here is a brief description of each component in the MV pattern:
 ## Requirements
 - Minimum deploy target: iOS 16.2
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
+This repository is under the MIT license agreement. Check [LICENSE](LICENSE) for further information.
 
 ## To-do
 - Add on disk storage to persist data between launches.
