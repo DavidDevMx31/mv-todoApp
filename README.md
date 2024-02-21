@@ -8,7 +8,7 @@ The project is developed using SwiftUI following the MV pattern. The data is sto
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/tuusuario/todo-app-ios.git`
+1. Clone the repository: `git clone https://github.com/DavidDevMx31/mv-todoApp`
 2. Open the project in Xcode.
 3. Launch the simulator or connect your device.
 4. Run the app.
