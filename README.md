@@ -65,11 +65,11 @@ The project structure follows the MV pattern. This is not the official name of t
 Although using the MVVM (Model-View-ViewModel) pattern has been recommended since the introduction of SwiftUI, it is common to feel that implementing projects under this paradigm adds unnecessary complexity. The MV pattern draws inspiration from principles used in other declarative paradigm platforms, such as React and Flutter, which have greater maturity, having appeared years before SwiftUI.
 
 This pattern is based on the following fundamental concepts:
-1. **Views are also view-models in SwiftUI**
+1. **Views are also view-models in SwiftUI**:
 Due to SwiftUI views' built-in binding, they can also function as view models; therefore, it is not necessary to add extra complexity by introducing a view model for each view.
-2. **Models are structs (value types)**
+2. **Models are structs (value types)**:
 Models are defined as structs, which offer inherent benefits of immutability and efficient data handling.
-3. **Access to models through ObservableObject**
+3. **Access to models through ObservableObject**:
 Access to models is exclusively done through an ObservableObject. This serves as the gateway to information, ensuring that the information is always in a valid and consistent state. The name given to this gateway varies; some call it Store, while others use Aggregate Root or Aggregate Model.
 
 The fundamental idea of this pattern is that the user will perform actions that generate changes or mutations in the app's state. Changes in the app's state will prompt the UI to update to reflect the most recent state of the information.
@@ -78,7 +78,7 @@ Here is a brief description of each component in the MV pattern:
 
 - **Model (Model)**: Represents the data.
 - **View (View)**: Displays the user interface and manages interaction.
-- **Aggregate Root**: Encapsulates and protects the internal state of the information.
+- **Aggregate Root**: Encapsulates and protects the internal state of the information. As the business logic becomes more complex, we might need to split it into many Aggregate Roots, to preserve the Separation of Concerns principle. Then, we can use them together to achieve the desired functionality.
 
 ## Technologies
 - SwiftUI
