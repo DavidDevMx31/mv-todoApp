@@ -34,6 +34,13 @@ Deleting a task can be performed in two ways:
 
 a. Full swipe left on the row you would like to delete.
 
+### Mark task as done
+
+https://github.com/DavidDevMx31/mv-todoApp/assets/67614342/0250ec3b-4e5a-44e1-b4c2-043fa9aca919
+
+1. Swipe left on the desired task.
+2. Tap on the check icon ✅.
+   
 ## Documentation
 
 The project structure follows the MV pattern. This is not the official name of the pattern; some refer to it as the State Pattern, while others call it the Model-View Pattern.
